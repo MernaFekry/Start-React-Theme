@@ -1,4 +1,308 @@
-.App {
+:root{
+  --headerBgColor: hsl(168, 76%, 42%) ;
+
+}
+
+ul{
+  list-style: none;
+  text-decoration: none;
+}
+
+/* ************************************************************************** */
+/* NavBar Component */
+.navbar{
+  background-color: rgb(44, 62, 80) ;
+  /* color: white; */
+}
+.navbar-brand{
+  font-size: x-large !important;
+}
+
+
+.nav-link:hover{
+  color: var(--headerBgColor) !important;
+}
+.nav-item a,.navbar-brand a{
+}
+
+.nav-item .active{
+  /* padding: 5px !important; */
+  background-color: var(--headerBgColor) !important;
+  color: white;
+  /* border-radius: 5% !important; */
+}
+/* .nav-link:hover ,.nav-item .active:hover  .nav-item .active{
+  color: white;
+} */
+
+
+/* ************************************************************************** */
+/* Header Component */
+.headerContainer{
+  min-height: 95vh;
+  background-color: var(--headerBgColor);
+}
+.headerRow img{
+  width: 30vh;
+  margin: auto;
+}
+.headerRow h1{
+  font-size: 70px;
+  position: relative;
+}
+
+
+.headerIcon::before{
+  position: absolute;
+  left: 40%;
+  top: 50%;
+  transform: translateY(-50%);
+  content: "";
+  height: 3.5px;
+  width: 100px;
+  background-color: white;
+}
+.headerIcon::after{
+  position: absolute;
+  right: 40%;
+  top: 50%;
+  transform: translateY(-50%);
+  content: "";
+  height: 3.5px;
+  width: 100px;
+  background-color: white;
+}
+
+
+
+/* ************************************************************************** */
+/* About Component */
+.aboutContainer{
+  background-color: var(--headerBgColor);
+}
+.aboutInnerContainer{
+  width: 60% !important;
+}
+.aboutSubtitle h2{
+  font-size: 50px;
+  font-weight: bolder;
+}
+.aboutItem {
+  width: 95%;
+  font-size: 20px;
+}
+.aboutSubtitle{
+  position: relative;
+}
+.aboutIcon::before{
+  position: absolute;
+  left: 5%;
+  top: 83%;
+  transform: translateY(-50%);
+  content: "";
+  height: 3.5px;
+  width: 100px;
+  background-color: white;
+  /* border-radius: 5%; */
+}
+.aboutIcon::after{
+  position: absolute;
+  right: 5%;
+  top: 83%;
+  transform: translateY(-50%);
+  content: "";
+  height: 3.5px;
+  width: 100px;
+  background-color: white;
+}
+
+/* ************************************************************************** */
+/* Contact Component */
+.contactItem input,.contactItem textarea{
+  border-top: 0;
+  border-left: 0;
+  border-right: 0;
+  border-bottom:1px solid lightgray;
+}
+.contactItem input:focus,.contactItem textarea:focus{
+  box-shadow: none;
+  border-bottom:1px solid lightgray;
+}
+.contactItem button{
+  background-color: var(--headerBgColor);
+}
+.contactItem button:hover{
+  background-color: rgba(26, 188, 156,0.7);
+}
+.contactSubtitle h2{
+  font-size: 50px;
+  color: rgb(44, 62, 80) ;
+}
+.contactSubtitle{
+  position: relative;
+}
+.contactSubtitle i{
+  color:rgb(44, 62, 80) ;
+}
+.contactIcon::before{
+  position: absolute;
+  left: 40%;
+  top: 83%;
+  transform: translateY(-50%);
+  content: "";
+  height: 3.5px;
+  width: 100px;
+  background-color: rgb(44, 62, 80);
+}
+.contactIcon::after{
+  position: absolute;
+  right: 40%;
+  top: 83%;
+  transform: translateY(-50%);
+  content: "";
+  height: 3.5px;
+  width: 100px;
+  background-color: rgb(44, 62, 80);
+}
+
+/* ************************************************************************** */
+/* Portfolio Image Component */
+.PortfolioImage{
+  /* transition: .7s all ease-in; */
+
+}
+.portfolioItem{
+  position: relative;
+  cursor: pointer;
+  /* transition: .7s all ease-in; */
+}
+
+.portfolioItem .imgLayer{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color:rgba(26, 188, 156 , 0.5) ;
+  display: none ;
+  transition: .7s all ease-in;
+
+}
+.potfolioIcon{
+
+}
+
+.portfolioItem:hover .imgLayer{
+  display:flex ;
+  
+}
+
+.starIcon{
+  position: relative;
+}
+/* 
+.starIcon{
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+} */
+.portfolioSubtitle h2{
+  color: rgb(44, 62, 80);
+  font-size: 50px;
+}
+.potfolioIcon i{
+  color:rgb(44, 62, 80);
+}
+
+.portfolioSubtitle{
+  position: relative;
+}
+.potfolioIcon::before{
+  position: absolute;
+  left: 40%;
+  top: 83%;
+  transform: translateY(-50%);
+  content: "";
+  height: 3.5px;
+  width: 100px;
+  background-color: rgb(44, 62, 80);
+}
+.potfolioIcon::After{
+  position: absolute;
+  right: 40%;
+  top: 83%;
+  transform: translateY(-50%);
+  content: "";
+  height: 3.5px;
+  width: 100px;
+  background-color: rgb(44, 62, 80);
+}
+
+
+
+
+
+
+/* ************************************************************************** */
+/* Footer Component */
+.footerSection{
+  background-color: rgb(44, 62, 80);
+}
+.footerIcons{
+  display: flex;
+  justify-content: space-between;
+}
+.footerIcons li a{
+  color: white;
+}
+.footerIcons li{
+  width: 35px;
+  height: 35px;
+  /* background-color: aqua; */
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid white;
+  transition: .3s all ease-in;
+  cursor: pointer;
+}
+.footerIcons li:hover{
+  background-color: rgba(255, 255, 255 ,0.3);
+  /* color: black !important; */
+}
+
+.copyright{
+  background-color: rgb(26, 37, 47);
+}
+/* .footerIcons li:hover > .footerIcons li i{
+  color: black !important;
+} */
+
+@media screen and (min-width:0px) and (max-width:992px) {
+  /* About Component */
+  .aboutInnerContainer{
+    width: 100% !important;
+  }
+
+
+  
+
+}
+
+/* @media screen and (min-width:992px)  {
+  .aboutInnerContainer{
+    width: 70% !important;
+  }
+
+
+} */
+
+/* .App {
   text-align: center;
 }
 
@@ -35,4 +339,4 @@
   to {
     transform: rotate(360deg);
   }
-}
+} */
